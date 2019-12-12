@@ -1,0 +1,123 @@
+
+Lou Vega:
+Pen tester report
+OSCP take notes of what your doing
+Security analysis (potential impact w/ pros/cons)
+Phases of Unknown Environment:
+Know it
+	Boundary of Scope
+		Scoring
+		Infrastructure
+		Other Teams
+	Don't nmap everything
+		Time
+		Wasted info
+		Infrastructure
+Ennumerate
+	nmap/mass scan network/subnet
+	Maltego + OSINT
+Strengths/weaknesses
+	Webapp pentesting
+	DB pentesting
+	OS Knowledge
+	Primary/secondary
+	Point of Access (cmd injection lateral movement)
+Roles:
+	Scanning
+	Webapp pentest
+	Password Cracking
+	OSINT
+	Burpsuite/OWASP zap
+	Vulnrability hunting
+		Server type (Distro/kernel) + exploits
+	Privilege escalation
+	nvdb
+Don't focus on specific tools per say
+	possible tool restriction
+	concept to different tools
+
+Focus on:
+	IPV6
+	Trust who you arrive
+	How to patch/fix
+	CVE
+	2 choices for mitigation
+	IR Reports (Sans Reading Room) (Document Sources)
+	GItKraken (Pro w/ .edu)
+	Automate CVE Search w/ python
+	RE/code analysis
+	Object desterilization
+	Backups	(Win/linux + safe storage) look for tick at the end of the file 
+	Window Group Policy, Alternate Data Streams (ADS)
+Crackable passwords or uncrackable (10 min time limit)
+
+Jason Damron:
+	How to fix and how to test same vulnerability
+	Find something bad, notify authority IMMEDIATELY
+	NDA- common, read to see what it covers and cannot disclose any information gained on engagement
+		Possible Engineering aspect after engagement time ends, talk about afterwards
+		Don't talk about tactics outside environment
+	Report 
+	RFP- keep good notes during the competition, screenshots 
+	Financial regulaions knowledge
+	In terms of money
+	Triage, notes, & screenshots
+	Impact, what we did, & remidiation
+	Discussion @ end, time limited engagement, extrapolate findings
+	Legality
+		Scope- what is allowed to be tested/scored, watch what your scanning, can we touch it?, know if you are in-bounds 
+		Ownership- client owns what is being scanned, no DDOS, ask permision to scan all systems?
+	Keep track of your tracks
+	Starting Point:
+		O(bserve)o(rient)d(ecide)a(ct) loops
+			Scan
+			Identify targets 
+			Divide & conquer
+			exploit & make $$$ 
+	Azure most likely, IOT could be used
+	Research CVE's/ExploitDB
+	OpenVAS(Neil), OWASP Zap, Metasploit, maltego, nmap, hashcat, netcat, responder(Neil), burpsuite, dirb/dirbuster
+	AD*(Stephen & Dilyara)- bloodhound, PowerShellEmpire+mimikatz(Dilyara), Powersploit, responder(neil) (MITM)
+	Report- direct and to the point but, elaborate a little on why it's important
+		Failed attacks also important to document 
+	Blockchain vulnerable to something
+	byt3bl33d3r
+	Phone app APIs?
+	Refer to Tom for further inquiries
+Ryan Hays:
+	Research exploits and don't knock down stuff
+	Screenshots
+	Known vulnerability: find all but don't 
+	Defcon crypto videos
+	Standard C2
+		Send shell to everyone
+		Metasploit
+		Powershell loaders
+		Scan and upload to google drive
+		don't all scan at once
+		no stealth during assesment
+		no compliance for the report, but for executive report
+		pass the hash- look for local hashes
+			crackmapexec
+		username compisition
+		malware somewhere
+			exploit development
+			downoad custom application
+		look for apps without password timeout
+			try not to bruteforce
+		IOT possibility
+			AC
+			Printers (AD credentials)
+			Cameras
+		responder
+			ARP authentication
+		use kiwi is new (creds all)
+			mimikatz metasploit
+		DBs with credentials
+		pentest monkey
+Questions for Call:
+Template for report? (SANS reading room, Offensive Security's template)
+Network Scematic/Linux Flavors/distros/tools?
+Agenda?
+How are the flags scored? Report/Submission
+Network infrastructure IPv4/6 

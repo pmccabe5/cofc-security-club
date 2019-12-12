@@ -1,0 +1,110 @@
+BSIDES Workdshop
+    What is pentesting?
+        Subjective
+        Different company = different meaning
+        Sell the customer about what you can do
+        **pentest-standard.org
+        Vulnerability Scanning- scan to report (monthly)
+        Penetration Test- known testing, scan more of the network (ex nmap), find vulnerabilities, exploit, & demonstrate risk (every year or so)
+        Red Team Assesment- they don't know your coming and objective is established, full on adversarial simulation engagements can be long term, and use long term advanced tactics, techniques, and procedures (specific targets) (lets see what happens)
+            test chain of command and incidence response
+       Back office/documentation
+        scoping calls- what is in bounds, used for compliance (get Tom on the phone)
+            how many ips
+            what is the objective (root, group of users, domain admin)
+            defenses (maturity of these defenses ex: CSOC, firewall)
+            objective (pricing can vary)
+            timing
+        Master Service agreement (MSA)
+            Used to define business will be conducted between two businesses
+            Commonly include
+                payment terms
+                insurance
+                liability
+        Scope of Work 
+            Rules of engagement
+                dates/times (testing blackouts)
+                systems not aloowed to be tested on
+                attacks that cannot be carried out
+            Defines:
+                services
+                scope
+                rules of engagement (when is testing allowed)
+                Requirements needed from both parties
+        Get out of jail letter
+            letter signed by point of contact
+            keeps you out of jail
+            details out testing restrictions or allowable activity
+    Pentesting Methodology
+        Information Gathering
+            Passive/Active
+                Passive: OSINT model (packets don't touch the network) 
+                Active: packets are sent to the newtork (nmap, masscan, netcat, telnet)      
+            Asset Enummeration
+                nmap
+                    nmap -sn -iL targets.ip -oA output
+                        sn: ping scan
+                        -iL: input from file
+                        -oA: outputs into multiple formats
+                set up log box
+                could use body cams...
+            Organization Ennumeration
+            
+            Service Ennumeration
+                nmap
+                    nmap -sS --top-pars 200 --open -iL targets.txt -oA top200services stealth
+                        -sS: syn scan
+                        --top-ports <ports>: only scan ports 1-200 
+                        --open: only show open ports
+                    nmap -sT --top-pars 200 --open -iL targets.txt -oA top200services stealth
+                        -sT: full connection scan
+                        -Pn: just start sending packets, can be useful with firewalls
+                        --script=<script>: use nmap script
+                masscan
+                    masscan <ip> -p startport, endport -oG mass_update --rate 10000
+                        -p: ports
+                        -oG: output to grepable file
+                        ---rate: rate at which it runs, BE CAREFUL with the number
+                    
+                other tools...
+            Technology Ennumeration
+                NSE scripts
+                    /usr/share/nmap/scripts
+                Browser plugins
+                    wappalyzer
+                    webpage source code
+        Threat Modeling
+            take data and analyze assets, services, and technologies
+            resources:
+                exploit-db.com
+                cve.mitre.org
+                others
+        Vulnerability Analysis
+            Hand in hand with threat modeling
+            Attack chains
+                set aside pentesting apart from basic vulnerability analysis
+                chaining pieces togetherto perform a full attack
+        Exploitation
+            exploit attacks that have occurred already
+            exploit code on the internet
+            metasploit
+                all in one
+                take nmap scan and feed into db
+                exploitation
+                post exploitation
+        Post Exploitation
+            start enumerating the machine
+                users (/etc/passwd)
+                os version
+                files
+                    /home
+                    ssh keys
+                other things? /etc/hosts, any *.cfg, history, try not to keep persistance (depends on the engagement), /etc/shadow, sensitive data, source code
+        Reporting
+            hands off the keyboard if theres illegal data on the machine
+            don't continue if there's a glaring exploit
+            executive summary: for the higher ups
+            detailed summary: all the exploits and vulnerabilities that need to be patched
+            know thier business process
+            save logs
+            

@@ -1,0 +1,745 @@
+BSIDES Charleston notes (Nov 2018)
+    
+Tool Misconfiguration and Abuse
+    Unpatched software is a big problem
+    Changes
+        patches
+        asset discovery
+        scans
+    don't want to be hacked
+        regulations
+        vendor compliance
+        framework certs
+        customer privacy
+        business relationships
+        company ip
+        employee data
+            don't put physical stuff in the open
+    compliance
+        PCI DSS
+            if company processes cc's
+        FISMA
+            pentesting
+            asset management
+        Sarbanes-Oxley
+            SOX
+                risk assement
+        GLB
+            patches
+            antivirus
+            firewalls
+            close ports
+    standard cert
+        iso 27001
+            intl
+            wide range of controls
+        orgs can be certified
+            asset management
+                inventory
+            vuln management
+        banks
+            vendor compliance
+            audits
+            protect assets
+                security maturity
+            FI
+                vuln management
+                pwd rules
+                storage
+                patch management policy
+        plan
+            honeypot
+            ?
+            profit lol
+        side notes
+            dont descibe accounts too much
+            change passwords
+            dont substitute chars for pwds
+            dont name qualys user with qualys in the damn name
+            change qualys username + pwd
+    remediation
+        lansweeper and inventory tool
+        credentials or agent scanning
+        linux scan
+            ssh access
+            full root not necessary
+            can be cert based
+            must run certain cmds
+            agent scan windows when possible
+            ssh scan w/ certs
+            limit scans w/ known subnets
+            dont use root/domain accts
+        DSM
+            not supported
+            generic
+                rotate pwds
+                create long, complex pwds
+                use agent when available
+                user != console itself
+                monitor logins for unusual times
+                AD hardening
+            solar winds
+                "patchman"
+            qualys
+                very long complex pwd
+                no DA
+                    lower level of access
+                monitor logins (times)
+            AD
+                limit num of da's
+                    give secondary acct
+                    w/ different pwd
+                    adding usr should be last resort
+                    disable WDigest Auth
+                        if possible
+                    services = long complex, and rotate
+                    monitor logins (times)
+                        know schedule
+    in conclusion
+        follow vendor recs
+        limit additional risks
+        harden AD
+        
+Red team movement
+    basics
+        inital recon
+        lateral movement
+    set the stage
+        compromised
+            phishing
+            bash bunny
+        who are you on net
+        where on net
+        move to another system on net?
+        can I compromise my system
+    understand surroundings
+        netstart
+    WMIC
+       time stomp
+            ctl shift esc
+    5985 & 5986(e)
+    
+Automating Blue Team stuff
+problemo
+        everything goes back to IT
+        affected by every business decision
+        involved in every event
+        infosec sal < IT sal
+    why
+        too many tools
+        too many alerts
+        attack surface is growing
+    types
+        within existing tools
+        scripts
+        specifically built for automation
+    diff
+        auto
+            auto handling
+        orch
+    where
+        maturity
+        time
+        budget
+        manual repetitive tasks
+        frequency
+        time it takes
+        defined/understood
+        complexity
+        time to automate
+    SIEM
+        sys info event management
+        minimize analyst research
+            add context to alerts
+        firewall/endpoint/vuln management
+            auto block ips/urls
+    automating existing tools
+        vuln management
+            new vuln & new/rogue assets
+        endpoint
+            auto deployment
+        server hardening
+            templates
+            scripts
+            configuration management
+        context
+            automate next steps
+                virustotal api
+        info collection
+            phishing automation
+                phishing intelligence engine (LogRhythm)
+                purge mal e-mail from office 365
+                check url via remote screenshot
+            threat hunting
+                bro (zeek)
+                    rita (counter)
+            IR
+                add ip to firewall blocklist via api (python)
+                kansa
+                    powershell ir framework
+                psrecon
+                    gathers data from remote windows host        
+                the hive/cortex/misp
+            threat intel aggre
+                minemeld, staxx
+        auto attack sim
+            commercial and open source
+            MITRE ATT&CK framework
+            test controls
+                endpoint
+                correlation rules
+        SOAR
+            features
+                playbooks
+                integration
+                conext enrichment
+                alert stacking
+            players
+                lots of them
+            common use cases
+                phishing automation
+                context enrichment
+                vuln management
+            how do i get it
+                damn expensive
+                demisto ce
+                phantom cyber ce (splunk)
+                cyops cybersponse ce    
+            caveats
+                expensive
+                complex
+                integrations (compare your tools)
+                POC with specific use cases                    
+            why not
+                lolcowing
+                automating bad processes are dumpster fires
+                need documentation
+                requires understanding and training
+                complexity
+            final thoughts
+                start small
+                dont be afraid to ask for help
+                offer help to other teams
+                evangelize within organization
+
+@shep Union SQL injection
+    {setup when I get back home}
+    DVWA
+    MSQL db
+    Wireshark
+    SQLMap (reverse)
+    sqli
+        db hacking
+        websites vuln
+    check -p 80
+        make sure its not being used
+    select + UNION + select
+    127.0.0.1 -p8080
+    burpsuite
+    
+How not to get into InfoSec
+    failure
+        lack of success starts the journey
+    goals
+        measurable
+        meaningful
+        attainable
+    take notes during ctfs
+    certs
+    sign up
+        get involved 
+        talk to people
+        learn
+        make friends/connections
+        teach something
+        discover
+    stuff
+        bsides
+        talksontaps
+        chs infosec group
+        cyberpatriot
+        +more
+
+BSIDES Charlotte Notes (Sept. 2019)
+    COFC 1-0 in Jeopardy
+    Opening Keynote (W. Goerlich)
+        Breakng and Entering into cyber
+        Group of CISOs- Snooze 
+        Disconnect between Milenials and everyone else
+        All generations are screwed up kinda
+        Computers 
+            Sing to the computer so it can work
+            Windows = bad
+            Radia Perlman*
+            Bill Joy is to blame for Java
+            Tim Berners-Lee (inet)
+            Hacker (1963)
+            Hooded guy (duh)
+            Gen0 - (1950s) programming
+            Gen1 - (1970s) Internet and web
+            Gen2 - (1990s) Talent shortage
+            Gen3 - (2010s) ...
+            Programming & running cables
+        People
+            Bill Joy 
+                Unix
+                Punch cards fading, programming growing
+                Joy's Law
+            No talent shortage, hiring problem
+                Biases
+                    cognitive bias
+                    like me bias
+                    choice support bias
+                Tips & Tricks
+                    Promotng: flexible descriptions
+                    Recruiting: unconventional postings
+                    Pre-screening: blind resumes
+                    Interviewing: diverse perspectives
+                    Post-Interview: leave them good, connect with people and show them resources
+        Skill shortage
+            Skills
+                Gen0 - (1950s) programming [isolated tech]
+                Gen1 - (1970s) Internet and web [connected tech]
+                Gen2 - (1990s) Talent shortage [ubiquitous tech]
+                Gen3 - (2010s) ... [intelligent tech]
+            Know 
+                Network+
+                Skills here aren't necessarily the skills for tomorrow
+                Technical skills no longer excuses people skills
+                Programming to problem solving
+            People skills
+                Problem solving
+                Critical thinking
+                Creative thinking
+                Study skills
+            Coaching framework
+                Perception (People)
+                Relationsips (People)
+                Competencies (Technical)
+                Wins
+        Let them Stick it to the man
+            Breaking rules
+            Break a couple 
+            Rules for breaking rules
+                Break a rule a day
+                Getting out of trouble is a muscle
+                Never break a rule you cannot accept the consequences
+                Don't break a rule where someone else pays the consequences
+                Tell someone what you are doing
+        Stress:
+            Embrace it 
+            Be comfortable being uncomfortable
+            Deep roots needed within the community
+            Burn out is real
+            Management toolbox
+                Food, sleep, exercise
+                Massages and steam rooms
+                Meditation
+                Therapy
+                Time-off (down days)
+                Tme-away (vacation days)
+                Exercise/sports
+                Music
+                Action movies
+                Security conferences
+            Embrace stop
+                Physiological effects (balance or leave)
+                Non-competitive compensation (raise or leave)
+                Lack of training (make time)
+                Lack of career path (level up)
+                Poor teamwork (soft skills, training)
+                Poor leadership (emotional intelligence)
+                No appreciation or recognition
+                Misaligned values and culture
+                Quitting beats coping when dealing with long term stress
+
+    5 Things That Matter
+        The beginning
+            We're still finding our way, butgetting better
+            Still havent been replaced by AI
+            Top 5 things that matter in security
+            "Everything is broken"
+            Harder to challenge the norm, make things better
+            We are getting better and maturing as an industry
+            Not everything is broken
+        Basics
+            Weka passwords, 2FA, segmentation, app whitelisting
+            Not an easy fix and takes time
+            Programs designed to try and handle evrything
+            See photo
+            Windows Firewall, Endpoint logs
+            Purchase tools = fix poor programs & lack of leadership
+            Executive buy-in, mismanagement and leadership, or infancy in security
+            Some further ahead of others
+            Collaboration = harder to attack, better practice
+        Simuations and Emmulations
+            Tools releases are great simulations
+            Without, red/blue can't understand each other
+            Working through identifying gaps in programs help put priority on what really matters
+            Smash & destroy history from pen testers from 10 years ago
+            Industry change happened
+        Collaboration and Sharing
+            Info sharing
+            Concerns about crowdsourced TTPs
+            Some red teams do their own research and customize tooling to compete
+            Research is a good thing
+            Releasing tools is a good thing
+        Behavior
+            Techniques, not tactics and procedures
+            Too many false positives
+            Allocation of appropriating resources for detection
+            Protection takes time 
+            Detection vs. Protection
+            Visibility is first step
+            Must include endpoint logs
+            Break out - 1.5 hours
+        People, Leadership, & Communication
+            Isn't easy
+            People are the most important security resource
+            Selling ourselves, our value, & strategy isn't easy
+            Investments that need to do our jobs is tough
+            Tougher when we say no
+        If you can't make a change, move on
+
+    History of Least Privilege -Unix
+        Basics
+            Useful to examine the evolution of thinking
+            Who paid for the development of features
+            Context for your own apps
+        Time sharing problem
+            Huge, powerful, & expensive
+            Virtualization
+            Sharedresources
+            MIT professor Fernando Corbato
+            IBM built the first hypervisor in 1966
+        Hypervisors
+            Virtualization- run guest OSs
+            Type 1- lean OS (kernel)
+            Type 2- Software running on top of more conventional OS (VMWare)
+        Kernel 101
+            OS core
+            memory/process management
+            Peripheral/ I/O device maagement
+        syscalls
+            user mode requires system call
+            Switch from user mode to to kernel mode (context mode)
+        Mutics and Sharing the kernel
+            1964 project from MIT
+            GE & Bell Labs
+        Ring-Oriented Security
+            CPU hardware control
+                Ring0- most privilege (kernel mode)
+                Ring1/2- Rare
+                Ring3- least privilege
+            Mediates access protected registers and features
+        Discretionary access control
+            rwx permissions
+            One of the most used security measures in Unx
+        Unix Wars
+            1969- Bell labs pulls out of lutics
+            1973- Thompson and Ritchie write Unix
+            1975-1977- BSD written
+            1985- RMS starts FSF, herd is never finished
+            1992- BSD accussed of taking too much code from Unix, gets sued
+            1991- Linus Torvalds wries FOSS Minix clone
+        Chroot not a security feature
+            Unix v7 released in 1979
+        The Orange Book
+            1983- Trusted Computer System Evaluation Criteria (TCSEC)
+            1992- NCSC starts their own operating systen
+            2000- NCSC Mandatory Access Control (MAC) called Security Enhanced Linux (SELinux)
+        MAC & LSM
+            1998- AppArmor
+            2001- NSA presents SELinux at Linux Kernel Summit
+            2002- LSM presented at USENIX
+            Takes ~3 years to rewrite things
+        Capabilities (1999)
+            Privileged processes bypass all Kernel permissions checks
+        Namespces (2002)
+            Bell labs turning ot OS's in numbers
+            7 kinds of namespaces implemented
+        Seccomp
+            2005 Andrea Arcangeli- selling CPU cycles to run arbitrary code
+            2012 Google- browsing the internet is pretty much the same situation
+        cgroups
+            Google begins development in 2006
+        Putting it all together
+            2008- LXC
+            2011- Warden by Cloudfoundary
+            2013- Docker
+            2013- LMCTFY by Google
+        Part 2
+            2015- Google open sources rebuild of ther internal Borg (Kubernetes)
+
+    Setting up a Hybrid Hacking Lab
+        Why?
+            Demo
+            Learm
+            Improve Blue Team Tactics
+            Set up at company for practice
+        Need:
+            Laptop OR
+            Desktop OR
+            Server
+        Look for:
+            Virtualization in CPU
+            Storage 256GB+
+            RAM- 8-16GB
+        Virtualization
+            HyperV
+            VMWare Fusion
+            VirtualBox
+            Linux Xen
+        OS Choices
+            Kali
+            ParrotOS
+            Pentoo
+            BackBox
+            Samurai WTF
+            DEFT
+            CommandoVM
+        Vulnerable Machines
+            Metasploitable
+            Morning Catch
+            OWASP Broken Web Applications
+            Wbe Goat
+            vulnhub
+            ExploitDB
+            Outdated OS
+                Win Xp/Server/Exchange
+        Tools (Understand how the tools work)
+            nmap
+            Nessus/OpenVAS
+            Responder (NTLM HAsh Gatherer)
+            JohnTheRipper 
+            PRET (Printer Exploitation)
+            Metasploit
+            Social Engineering Toolkit
+            Post Exploit
+                PowerShellEmpire (PS)
+                Kerberoast (Win)
+                CrackMapExec (PS)
+        Learn AD
+            Build a domain
+            setup users with various access levels
+            Practice GPOS
+            Take snapshot & revert after every 180 days
+        Using the cloud
+            AWS
+            Azure
+            Vultr
+            OneHost Cloud
+            CTFs
+                HackTheBox
+                HackTheWorld
+                OverTheWire
+        AWS
+            Allowed (No DDOS)
+        Books (see photo)
+        Additional Training
+            Cybrary, HackerOne, Bugcrowd University
+            Youtube
+            Blogs (hackers-arise.com, TrustedSec, Black Hills Infosec)
+            Metasploit Unleashed
+BSIDES Charleston (2019):
+	Keynote:
+		Project 0: RE
+		Pick your side
+			Red
+				use offensive tactics & pov
+				Types
+					pentest
+					social engineering
+					vuln research: patch & fix
+					adversary simulation: pentest type, model after attack vector (script-kiddie, organized crime, nation-state, etc.)
+					exploit development
+			Blue
+				protect organization and devices
+				Types:
+					SecOPS
+					Malware Analysis
+					Threat Intel
+					IR
+					Digital Forensice
+			Identity
+				Drawn to Red
+					more tangible goals
+					makes problems
+				Drawn to Blues
+					more real
+					wait
+					solves problems
+			Simplification of the other side, forced dichotomy
+			Same goal
+			Red helps blue
+			Persistence
+			Blue helps Red
+				Scripting/tooling
+			Communication, Teamwork
+	Medical Records & Default Passwords:
+		Rooms, schedues, medical devices
+		displays for patient info
+		help figure out patient room & doctor, code blue --> internal network
+		doctors connect in through VPN
+		no segmentation
+		electronic medical records
+		HL7: encoding, not hashing
+			compatibility between devices, plaintext
+		Healthcare Defaults
+			museadmin:MuseAdmin
+			museBkgnd:MuseBkgd
+			can't change password because someone can die or knock something down
+			Citrix/VPN valid
+		Unauthenticated VNC
+		Unatuthorized access to ePHI
+			NFS: new file system
+		Password Manager is a must
+			passwords.txt/excs
+		Physical records
+		Duplicates count 1:1
+		OCR Breach Portal
+			>500: immediate
+			<= 499: at the end of the year
+		HIPAA
+			pentest if reasonable
+		HITRUST Framework
+			small: level 1
+			medium: level 2
+			big: level 3
+			measures lots of stuff
+		FHIR
+			RESTful APIs
+		Crown Jewels
+			ePHI
+				webcams
+			ePHI/PHI (physical pen test)
+				printers, fax, copiers
+				trash cans
+				NICU/ICU/ER publically visible
+		Listen to problems
+	Dr. X:
+		Why security metrics?
+			if you can't measure it, you cannot improve it
+			objective
+			What makes a good metric
+				Quantitative
+				Objective
+				Repeatable & reproducible
+				Inexpensive
+				Universally acceptable
+			Measuring security is difficult
+				Time to apply latest patch
+				Time until compromised
+			Landscape is complicated
+				IOT Security Landscape
+		Prior work on metrics for Security
+			2008
+				CIA, economic, framework, reliability
+				target
+				assumptions
+				validation
+			2016
+				vulnerability
+				defense
+			Attack Graphs
+				hops to asset
+			Simulations
+			Security Metrics- Federal
+				NIST-CVSS 3.0
+				ISO/IEC - 27004:2016
+			Security Metrics- Industry
+				Books
+			Challenge
+				Scope
+				Standardization
+				Verification
+				Politics...
+		Framework
+			IOT Threat Model
+			IOT Challengesow
+				Compute
+				Memory
+				Battery
+				Sensors
+				Actuators
+			Areas of focus
+				Know thy self
+				Know the enemy
+				Know the metric
+			IOT taxonomy
+				Organize
+				Prove
+				Apply
+			Device Characteristics
+			Models of IOT operation
+				Blaine's research
+			Adversarial modeling
+				When
+				How
+				after how long, your system will be compromised
+				measure the adversary's skill
+			Metrics for IOT security
+
+	Maltego:
+		OSINT
+			Open Source
+			publicly available
+			part of the recon process
+			Passive vs. Active
+				Passive = legal
+				active = grey area, can be base
+		Why?
+			Sales leads, marketing info
+			Footprint a network
+			Gain insight for what information is publicl available
+			Business preventing sensitive data leakage
+			Law enforcement
+		Problems in the process
+			Volumes of data
+			Organization of data
+			Reliability of data
+				who-----\
+						 |---> data comes from
+				where---/
+		What is it?
+			Data aggregation tool
+			Java based
+			APIs of various sources
+			Graphs using relationships and data points
+			CE
+		Important terms
+			Entities
+				specific nodes on the graph
+				manual/automatically added
+				pivot point for additinal transforms
+				don't forget about detail view
+			Transforms
+				utilizes data from an entity to pivot an find additional info
+				usually done with API calls
+				remote vs local
+				transforms can be added through hubs
+			Views
+				look @ data
+				block, hierarchical, circular, organic
+					weight of entity determines position
+			Machines
+				utiizes multiple entities and transforms to automate process
+				can use built in machines or mae your own
+				simple automation or larger custom scripts 
+			Collections- simplifies large number of entities
+			Privacy mode- normal vs stealth
+			Import/Exports, copy/paste entities
+		Machine creation
+	Cyber Security --> Business:
+		Problems
+			comm with leaders
+			resource allocation
+		Anything can be made into an IOT
+		5G
+			hasten growth of attack surface
+			hackers can exploit the ubiquitous 5G security lag
+		Risk is the rosetta stone of cyber-cXo relations
+			speak in terms of $$
+		Deliver consistent data on risk
+		
+	Malware Stagers:

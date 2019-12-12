@@ -1,0 +1,182 @@
+
+
+
+COFC Network + Man-in-the-Middle (MITM):
+800+ access and distribution switches
+1100 wireless access points
+8 campuses, 120 buildings, 200 communication rooms
+1500-2000 miles of fiber
+Lots of tools! (Splunk, Stackstorm, Netbox, Packetfence, solarwinds, airwave,
+FreeRadius)
+Narrow waist principle- whole bunch of physical layer protocols through an ip to
+a service/protocol
+Ethernet- (IPV4) mac address/destination, payload, in-order delivery; 
+packet has IP address; protocol layer 4
+Tools:
+    VirtualBox
+    wireshark
+    GNS3 (Junyper switches)
+        Docker
+        KVM
+    nmap
+    tcpdump
+    tcpflow
+    netcat (reverse console control)
+    ettercap
+GNS3
+    docker images, routers, etx
+    netcat
+        ncat-l 8080
+        ncap <ip>
+    hacker has no ip
+    bridge command 
+        brctl addbr <name>
+        brctl addif <name> eth[i]
+        brctl setaging <name> 0
+        ifconfig <name> up
+    tcpflow
+        tcpflow -C
+    hub based network
+        layer 2 device
+        plug in and get all traffic
+        bandwith lmited to the port speed
+    ettercap
+        ettercap -C
+        sniff > unify sniffing > intrface
+        1 for target 1, 2 for target 2
+    Switch 
+        layer 2
+        MAC address, port on switch #
+        CAM memory (linear search) (Content Addressable Memory)
+            aka hash table like structure
+        MAC Spoofing- overwriting CAM address & hijack session, exhaust memory
+        Limit number MAC addresses on switch (CofC allows 3 MAC addresses/device
+        including VMs)
+    ARP (Address Resolution Protocol)
+        DHCP network, packet traverses switch, MAC Address request, 
+        Switch understands, MAC address, and then assigns IP
+        Layer 2 vulneabilities can be reduced
+        ARP inspection
+        Discovers MAC address of the device
+        ARP Spoofing
+    ARP Poisoning
+        ettercap
+        add users as targets
+        go to MITM and select ARP Poisoning
+        Best attacks are the ones that the user doesn't know about
+        Must be compromized on the network
+    VLANs
+        Virtual network on a switch
+        ethernet packets include a tag specifically for VLANs
+        Double tagging causes problems
+    Mitigation
+        Encryption
+        Don't use hubs
+        MAC limits
+        DHCP
+        Don't use native VLAN on Trunk interface
+        Don't use open networks
+        Don't use WEP
+        Use EAP-TLS instead of EAP-PEAP-mschapv2
+Jason Trinlein Talk v2
+	low layer attacks
+	COFC Network
+		800+ access points
+		1,100 APs
+		1500-2000 miles of cables
+		Software
+			Infobox (DHCP)
+			Stackstorm (Event trigger system)
+			Netbox (Documentation system)
+			Solarwinds 
+			Ansible
+			Prometheus
+			Grafana
+			Airwave
+			Splunk (SIEM)
+			Packetfence
+			FreeRADIUS
+			Incinga
+	OSI Model
+		App
+		Presentation
+		Session
+		Transport
+		Network
+		Data link
+		Physical
+	Narrow waist idea- huge explosion of physical media, high level applications with a central protocol
+	Ring connection starts to form
+	New network connection device- HUB
+		Stupid
+		Don't know where devices are on the network
+		Sends packet to every device
+	Switch- more intelligent than a hub
+		small hubs inside
+	Ethernet Packet Frame
+		certain physical media
+		WIFI does not speak ethernet
+		Every device has its own MAC address
+			destination and source
+		IPv4
+			no transmission control
+			destination and source
+		MAC is static
+		TCP
+			source destination sequence number (reassemble) ACK windowsize
+		Tools
+			VirtualBox
+			GNS3
+				Docker
+				KVM
+			Ettercap
+			Netat
+			tcpdump
+			tcpflow
+			Wireshark
+			nmap
+		Selected Layers 1, 2, 3
+			Network tap
+			Network hub
+			Network hub ROS/DOS
+			Network switch MAC Flooding mitm
+			VLAN Double-tagging attack
+			Open wifi sniffing
+			WIFI cracking
+		Demo
+			Download docker images
+			Netcat
+				v1 ncat -l 80
+				v2 ncat <ip> 80
+				h brctl addbr <name>
+				h brctl addif eth0
+				h brctl addif eth1
+				h brctl setaging hacker 0
+				h ifcounfig hacker up
+				h tcpflow -e http -C
+			Hub
+				Still bad
+				Don't need 2 interfaces for h
+			Switch
+				Forms tables of IPs of hosts
+					T1 MAC, Port
+					T2 (ARP) IP, MAC
+				Overflow with garbage IPs & MACs
+					ARP Flood
+					Prevent: limit MAC addresses per port
+					Enterprise feature
+				ARP Poisoning
+					v1 ncat -l 80
+					v2 ncat <ip> 80
+					h ettercap -C
+						options promisc mode
+						Sniff host scan
+						1 for target 1
+						2 for target 2
+						t for targets
+						Mitm ARP poisoning
+						View connections
+						Enter on the flow
+					Prevention- hard code MAC entries, encryption, control VLANs (VLAN double tagging)
+					Open wifi cracking
+					WEP Cracking

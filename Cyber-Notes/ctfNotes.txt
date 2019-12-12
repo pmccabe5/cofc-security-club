@@ -1,0 +1,259 @@
+Command Line:
+cat file.txt | sort | uniq -c | less
+cat file.txt | grep "<insert text>"
+ps aux
+ps aux | awk -F '.' ' {print $1} '
+ps aux | awk '{ print $9 }' | awk -F ':' '{print $1}' | sort | uniq -c
+ps aux | awk '{print $1, $11}' | sort | grep 'root'
+cat filename.txt | wc -l
+ifconfig <interface>
+traceroute <address>
+pstree
+tig
+jp2a
+ctrl + l
+strings <file.txt> | grep "SKY"
+cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail
+dashed filename: ./
+space in file name: \
+find specific file size: find ./ -size 1033c
+
+John The Ripper:
+sudo john --show --format=<hashtype> hashes.txt 
+
+DNS Enummeration:
+host <hostname> or ip
+nslookup <hostname>
+nslookup
+    set type=ns #nameserver
+    set type=mx #emailserver
+dig <hostname>
+dig <hostname> -t [record type]
+dig <hostname> [record name]
+dig <hostname> -t [record type] +short
+
+Zone Transfers:
+host -t ns <domain>
+host -l <domain> [ns]
+dig <domain>
+dig axfr <domain> @[ns]
+nslookup
+set type=ns or set type=any
+dnsrecon -d zonetransfer.me -t axfr
+
+Metasploit:
+show payloads
+show targets
+show info
+search type[option] platform:[platform]
+
+
+NCL OSINT Questions:
+	Basic info:
+		NCL 
+			website: nationalcyberleague.org
+			Ethical Behavior: https://docs.wixstatic.com/ugd/766e9a_54bb1f9595fd4839bb49c61d05bd0404.pdf
+			FAQ: nationalcyberleague.org/faq
+			Issue contact: Cyber Skyline
+			Peers/Coach help: NO
+		Cyber Skyline 
+			website: cyberskyline.com
+			Peer/Coach help: NO
+			Registration: Aug. 26,2019
+			Facebook: https://www.facebook.com/nationalcyberleague/
+			Twitter: https://twitter.com/NatlCyberLeague
+			Top player from Fall 2017 (Regular Season): ggrins-CSU-Pueblo
+	Ports
+		HTTP: 80
+		HTTPS: 443
+		Telnet: 23
+		BGP: 179
+		openVPN IANA port: 1194
+	Google Dorks:
+		Specific domain: site: 
+		links to another site: links:
+		Specific value in page title: intitle:
+		Search <domain> for XML files: filetype:xml <domain>
+		Directory listing: in title: "index of"
+	IP addresses:
+		Valid on 10.6.20.0/24: 10.6.20.2-254
+		Valid on 192.168.64.0/20: 192.168.64.2-14
+		First possible 10.67.100.0/17: 10.67.0.1
+		Broadcast Address 10.160.0.0/11: 10.191.255.255  
+		Usable hosst 10.90.0.0/7: 33,554,430
+		IP from AS32: 128.12.0.0/16
+	DNS
+		Public Key Signing- DNSKEY
+		IPv6- AAAA
+		DNS zone transfer- NS
+	Threat Intel
+		POODLE CVE- CVE-2014-3566
+		Smileyface :)- VSFTPD 2.3.4
+		SSL heartbleed remediation- 1.0.1g
+		Telnet original RFC- 15
+		SQL slammer war- 376 bytes
+		Samy is my...- hero
+		What HTTP request header is used to denote what URI linked to the resource being requested?- referer
+		What HTTP request header is used to identify the client software that made the HTTP request?- user-agent
+		What HTTP request header is used to identify the acceptable content types that can be returned?- accept 
+	RPC Implementation: Courier
+	smallest bitcoin unit: satoshi
+Ciphers:
+	Crypto 1:
+	FXL-BMDH-7159: SKY-OZQU-7159 (13)
+	KCQ-WMGU-1514: SKY-EUOC-1514 (8) 
+	ZRF-CFSN-8874: SKY-VYLG-8874 (19)
+
+	Crypto 2:
+	9 23-9-12-12 3-18-5-1-20-5 1 7-21-9 9-14-20-5-18-6-1-3-5 21-19-9-14-7 22-9-19-21-1-12 2-1-19-9-3 1-14-4 19-5-5 9-6 9 3-1-14 20-18-1-3-11 1-14 9-16 1-4-4-18-5-19-1
+	I will create a gui interface using visual basic and see if I can track an ip address
+
+	Crypto 3:
+	===============
+	|  1 2 3 4 5 6|
+	|1 0 1 2 3 4 5|
+	|2 6 7 8 9 A B|
+	|3 C D E F G H|
+	|4 I J K L M N|
+	|5 O P Q R S T|
+	|6 U V W X Y Z|
+	===============
+	54	33	33	65		52	65		42 32		54	15	64	45	15	33		55	65	45	33	33	65
+	M   E    E   T     A   T        9  8        M   O   N   R   O  E        S   T   R   E   E   T
+
+	Crypto 4:
+		.wav file
+		morse code 
+		NOBODY WILL NOTICE THE MONEY IS MISSING
+	Crypto 5:
+		Railfence
+		Sr mmeuiyi iiactsnl: Security is minimal (3,0)
+		Tria edemnlray: Terminal ready (2,0)
+		Icerl  rl i iiscniptefcteaphai: i can cripple their facilities (4,0)
+	Crypto 6: RSA
+		n = 1829 (31,59)
+		e = 11
+		c = 539 685 1763 536 1725 1006 685 953 536 1319 103 1319 843
+
+
+NCL Individual Game:
+	OSINT:
+		Codenames (https://www.2600.com/secret/more/codes.html):
+			Mechanic: Jared Kushner
+			Marvel: Ivanka Trump
+			Punch Bowl: Capitol Building
+			Road House: WALDORF ASTORIA, NEW YORK
+			Bamboo: PRESIDENTIAL MOTORCADE
+		WHOIS (cyberskyline.com):
+			Registrar of the Domain: http://www.namecheap.com
+			IANA ID: 1068
+			Domain Registration Date: 2014-04-15
+			Registry Domain ID: 1854866838_DOMAIN_COM-VRSN
+		Capture the Flag (ctf.jpg):
+			City: Macedon
+			Date Taken: Oct. 14, 2019
+			Who owns the Field: Long Acre Farms
+			Flag Value: SKY-MAZE-1014
+		Cait's Trip to Olando:
+			Drink @ Galaxy's Edge: Blue Milk
+			Droid best friend: R3N1
+			Kait's Droid: BB-K8
+			Starwars Language: Aurebesh
+			Deciphered Text: DANGER KEEP CLEAR
+			Wand Flag: NCL-WAND-8943
+			Flag before flight: NCL-BUZZ-4816
+	Cryptography:
+		Decoding 1:
+			00110010 01101110 01100101 01100001 01110010 01101101 01101001 01110011 01110011 00110001: 2nearmiss1
+			346b65657068616c7434: 4keephalt4
+			Mjg1bGVmdHRlbGwzMjg=: 285lefttell328
+		Decoding 2:
+			Gurer ner rvtug pbagnvaref ehaavat: There are eight containers running (Caesar 13)
+			Lzwjw sjw fafw UNWk xgj lzsl kwjnwj nwjkagf: There are nine CVEs for that server version (Caesar(8))
+		Decoding 3:
+			68 111 32 121 111 117 32 116 104 105 110 107 32 116 104 101 121 32 119 105 108 108 32 98 101 32 97 98 108 101 32 116 111 32 100 101 99 114 121 112 116 32 116 104 105 115 32 45 32 67 114 121 112 116 111 48 48 49 54 106: Do you think they will be able to decrypt this - Crypto0016j (Decimal)
+		Decoding 4:
+			QlpoOTFBWSZTWb71818AAAUeAAACQQAAjEogIAAxADAgZDJrMA8gyn4u5IpwoSF96+a+:
+		Decoding 5:
+			w     eytaihtkyddyuuet nrp h rhv?aeiosoctece: what key did you use to encrypt the archive? (Railfence(3,0))
+			s ersnusdoh y m kyee: send me your ssh key (Railfence (7,0))
+		Stego 1:
+			Stego 1.jpg: SKY-HONK-2651
+		Stego 2:
+			Stego 2.jpg: SKY-QUAK-7261 (using: https://futureboy.us/stegano/decinput.html)
+		Stego 3:
+	Password Cracking:
+		Hashing:
+			03traces2430 (MD5): 0b942f5aec06a139b394e48f02134c5d
+			BACKspace15687 (sha1): 6d3cb2c7628e3a072be54d92893679743f227aa8
+			dogwoof12120 (sha256): c450c3dd33d863f4dc16e1e0650c638b429a108110acb40a9dd1c1ea07409307
+		Cracking 1 (MD5, RockYou):
+			5c2bc50df69a4bfe2b84a0231e9d5161: vampire1221
+			2562205460b692619fa42ff3bc157c56: pumkin118
+			81731bf70b67652673f642d817292a1e: 1ghostofthegods
+			06e6c5ed3a2b6cbac507bf305fdc0d36: ilovespooky14
+			4090c3fafab8c61a77dd775763cd9bab: ghoul90
+		Cracking 2 (NTLM):
+			8DB1487EE6A5A8A6F95968FD0DEEE3F2:8678EF2D73D249922033B212DBFD9BF3: grimreaper08 
+			C1E93C824B1CFAA8C041FB6B709172ED:FFCC25D1DEBEAAF38677316818CDA59C: monsterskull
+			F2F1093DC553C82E9C5014AE4718A7EE:E90CA74DD67409BEC8CAE52D7ED5FD4D: 2witch35
+
+		Cracking 3 (MD5, "SKY-QQTY-%%%%"):
+			4225e99792dc967299f0da9189610d77: SKY-QQTY-8632
+			b1aeecb1fb2ee431f9e2bfd57e80e195: SKY-QQTY-4580
+			e3ea6542c5cdc5e9f42aa5eb845908dd: SKY-QQTY-0550
+		Cracking 4 (MD5crypt, movies):	
+			$1$uxff$0yMgPk9i2RfqmlXHDae/A/:
+			$1$tnck$lgJVtmbG2thji8w.pvuK30:
+			$1$dgsn$2ZgX3pvquWorGD2Lgjj3W1: 
+			$1$vgah$VnxHyh1o3FwMZAvKA5AQo0: 
+			$1$lkwc$iOXF5ekiNNyj1KByGFO8s/:
+
+NCL:
+cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail 10
+cat yourlogs.txt | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort | uniq -c | sort
+sudo hashcat -a 0 -m 0 hashes.txt ncl.txt --show > cracked.txt
+strings <file.jpg> | grep "SKY"
+less example.log
+imago -i <unputDir> -o <outputDir> -x -g -t jpeg
+uncompyle6 -o ~/Desktop/ <file.pyc>
+crunch 12 12 <alphabet> -t USE-MASK-@,%^
+netdiscover -i [interface name]
+java -jar -Xmx512m diit-1.5.jar #Digital Invisible Ink Toolkit
+md5sum <filename>
+dirbuster website https://hidden-files.cityinthe.cloud/
+nmap website: ports.cityinthe.cloud 
+dirbuster - //extensionless search
+nmap -A -Pn -sU -sV <host>
+cewl <website> -d 1 >> output.txt
+strcpy >> strncpy
+exiftool <file> -gpslatitude -gpslongitude
+zip decryption: zip2john <file> *IMPORTANT: hash Starts/ends with $*
+ip addr show | grep eth1 | grep inet | awk '{print $2}'
+find . -type f -print | wc -l
+
+WebApp Pentesting:
+Cookie Modification:
+	open editor
+	document.cookie = '<value>'
+	document.cookie //to check
+	enter random user/pass and login
+HTTP Request Manipulation:
+	open editor
+	$.ajax({
+        method : 'POST',
+        url : '/purchase?uid=d2406c50f686c1485477b2fd62714e8f',
+        data: JSON.stringify({
+        cost : 1,
+        tickets : 100000,}),
+        dataTYpe : 'json',
+        contentType : 'application/json',
+    });
+	
+Burpsuite:
+Proxy: 127.0.0.1:8080
+
+
+
+
+

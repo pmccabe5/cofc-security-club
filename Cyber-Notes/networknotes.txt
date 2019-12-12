@@ -1,0 +1,91 @@
+10/9: Workshop 2, Dr. X
+	NCL Gym open
+	Djikstra's Algorithm
+	Top to bottom 
+	CSCI440
+	Internet
+		hosts- end systems
+		run net apps
+		Communication Links
+			Cables, radios, satellites
+			Transmission bandwith
+			Packet switches- forward packets
+				routers and switches
+		IOT
+			vunerable out of the box
+			More devices = more attack surface
+		Internet- networks of networks
+		protocols- control the sending/receiving of the messages
+		Standards
+			RFC- request for comments (854)
+			IETF- Internet Engineering Task Force
+		Infrastructure that provides services to appliations
+		provides programming interface ...
+	OSI vs TCP stacks
+		OSI
+			L7 Application (web browser)
+			L6 Presentation(interpret meanng of data, encoding/decoding)
+			L5 Session(synchornization)
+			L4 Link(LAN, ARP)
+			L3 Network
+			L2 Data Link
+			L1 Physical
+		TCP
+			L5 Application
+			L4 Transport
+			L3 Network
+			L2 Link
+			L1 Physical
+	Wireshark
+		Select interface and then capture
+		Traceroute- path to IP
+		Network Interface Card
+	Network Structure
+		Bunch of access networks
+		Doesn't scale O(n^2)
+		Google is an ISP in and of itself
+		Ex: Sprint
+	Layer
+		5 Application (DNS)
+			Web and HHTP
+				webpage consists of objects 
+				HTML file which includes several references
+				host/path
+				HTTP
+					Client-server model
+						Client- browser that requests/receives
+						Server- Sends objects
+					Uses TCP (80/80:80/HTTPS443)
+					GET/POST/HEAD
+						Header lines
+						crriage returns
+					Versions
+						1.0
+						1.1
+					Responses
+						200 good
+						301 moves
+						400
+						404
+						505
+		4 Transport vs network
+			logical communication between ports
+			routers L3
+			reliable- TCP (Proto 6)
+			unreliable- UDP (Proto 17)
+			logical ports for apps
+			UDP (non-HD videos) 
+		3 Network
+			best path
+			could be congested 
+			forwarding and routing
+				routing algorithms
+				queues...
+				1064 byte max
+			IP addresses
+				CIDR notation
+				subnet mask
+					logical and
+				darknet- blackhole with no hosts 
+				
+		2

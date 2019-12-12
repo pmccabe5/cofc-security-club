@@ -1,0 +1,42 @@
+CPTC Debrief
+	
+	The Good
+		Scanning and enumeration
+			nmap
+			Nikto
+		Exploitation
+			metasploit
+				aux postgre user enumeration
+			XSS (Persistent)
+			Buffer Overflow (@stephen)
+		OSINT 
+			Linkedin
+				not much info, few and far between key flags
+			Githubs
+		Documentation 
+			Screenshots
+			Logger script
+		Reporting
+			Good report startegy, divide and conquer approach worked really well
+			Business impact
+			Regulations
+	The Bad
+		Website taken down
+		Not scanning device
+		Reached out for 11/12 subnets
+		Go to Tom for the .250 thing
+		Keep tracks with OSINT
+		Enumeration/Exploitation
+			improve knowledge of exploits
+			GET THE RANGE UP 
+		Drive organization/gameplan 
+
+	What needs clarification:
+		10.0.11.0/24 & 10.0.12.0/24???
+	Next Time:
+		Check appendix
+		Get email confirmation of moves/change of scope
+		Organization- good but could be better
+		Different vulnerability scanners
+		Research and make up experience
+		Sample reporting
