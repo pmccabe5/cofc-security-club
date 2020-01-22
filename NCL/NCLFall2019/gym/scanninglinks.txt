@@ -1,0 +1,2 @@
+nmap: ports.cityinthe.cloud
+dirb/dirbuster: https://hidden-files.cityinthe.cloud/
