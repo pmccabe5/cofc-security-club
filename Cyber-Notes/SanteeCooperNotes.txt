@@ -1,0 +1,115 @@
+January 29 2020
+
+    PMP - project management
+    
+    Rules:
+        Ask questions
+        Test assumptions
+        Respect others
+        
+    Day in the life:
+        phish specific targets
+        unique urls
+        unknown signature + new attack
+        Magnallium
+        
+        Iranian Cyber Warfare:
+            Directed by Ayatollah
+            Iranian Cyber Army
+                Permanent staff used for ongoing persistent threats
+                Contractor staff 
+            50 organizations regularly want contract work
+            Ayatollah --> Iranian Revoutionary Guard Corps --> Iranian Cyber Army
+            --> contractors/Permanent staff
+            Ongoing: Saudi Arabia & US
+                govt, research, chem, engineering, etc.
+                Exploit known weaknesses and phishing
+                Capable of making their own tools
+            Reactionary:
+                2012 - present
+                2013 - Sheldon Anderson 'Turn Iran into glass'
+                    Data breach/information destruction
+                Larger skilset, smaller timelines
+    Things to know:
+        Virtualization
+        Windows is a target
+        Database
+            SQL Server express edition
+            MySQL CE
+            SQLite
+                Open OWDC connections
+            Cellphone forensics
+            Tools
+                how they work & why
+                math
+                backup claims
+                test assumptions
+                false representation = sued
+                approach as if it were a real event
+                document and timestamp w/ format
+                **wifi ap & entry log 
+                operational security to real world
+                bluetooth & mac beaconing based on beacons and aps
+                configs 
+                Specific tools:
+                    cis benchmarks
+                    wireshark
+                    openvas
+                    gns3
+                    AD
+                    OSINT
+                    metasploitable
+                    OWASP bWA
+                    getgophish.com
+                    Programming
+                        Python
+                        C#
+                        Java**
+                        C
+                        Powershell
+                    Security Onion
+                    define 'normal'
+                        build profiles for the environment
+                        investigate everything else
+            Communication
+                    How to speak
+                    How to listen
+                        understand audience & back up claims
+                        sit in on meetings & listen
+                        learn the people your working with
+                        fidgit, voice pitch
+                        how to communicate to specific people
+    Getting the Position
+        make write ups
+        Youtube: 7-9 minute videos
+        AITP
+        experience from industry
+        love of the job
+        where do you see this job in X years
+        certs
+        common interest OSINT conversation
+        look at what the company does/believes in
+        microsoft election stuff
+        choice of where you want to work
+        no accurate to replicate business environment
+        digital archaeology of code
+        upgrade horror stories
+        define role in compettions
+        no measurement = more frustrated
+        don't let first job disuade you
+        Read How to measure anything in cybersecurity 
+    Physical Security
+        no tailgating
+        take note of physiacal access controls
+        look and act like you belong and you will be ok (most of the time)
+        verification before entry
+        test own employees
+        offense
+            stressful situations
+            rob a bank by them bringing you the money
+        defense
+            accessing stuff they don't know
+            forensic events
+            inferences from data
+            autopsy
+**Take note of what you put out on social media
