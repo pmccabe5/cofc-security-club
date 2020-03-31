@@ -73,7 +73,7 @@ NCL OSINT Questions:
 		Specific domain: site: 
 		links to another site: links:
 		Specific value in page title: intitle:
-		Search <domain> for XML files: filetype:xml <domain>
+		Search <domain> for XML files: filetype:xml site:
 		Directory listing: in title: "index of"
 	IP addresses:
 		Valid on 10.6.20.0/24: 10.6.20.2-254
@@ -208,6 +208,46 @@ NCL Individual Game:
 			$1$dgsn$2ZgX3pvquWorGD2Lgjj3W1: 
 			$1$vgah$VnxHyh1o3FwMZAvKA5AQo0: 
 			$1$lkwc$iOXF5ekiNNyj1KByGFO8s/:
+
+	NCL Spring Game:
+		OSINT
+			Compromise Report:
+				CCLEANER Malware: Floxif
+				Time: 601
+				DLL: CBkrdr.dll
+				Registry location: HKLM\SOFTWARE\Piriform\Agomo:NID
+				HTTP POST: 216.126.225.148
+			Google Dorks:
+				Specific domain: site: 
+				links to another site: links:
+				Specific value in page title: intitle:
+				Search <domain> for XML files: filetype:xml site:
+				Directory listing: in title: "index of"
+			Capture the Flag (ctf.jpg):
+				City: Macedon
+				Date Taken: Oct. 14, 2019
+				Who owns the Field: Long Acre Farms
+				Flag Value: SKY-MAZE-1014
+			Tracking:
+				City:
+		Crypto:
+			Number Bases:
+				067 070 143 157 154 157 162 145 166 145 162 171 065 064: 78colorevery54 (base8)
+				33 38 20 33 30 20 37 32 20 36 35 20 36 31 20 36 63 20 36 63 20 37 39 20 36 35 20 36 31 20 37 32 20 37 34 20 36 38 20 33 31 20 33 33: 80reallyearth13 (base16 --> hex)
+				35 36 5e 62 5c 68 5e 5g 5e 69 6f 68 6e 2e 31: 89chancecount04 (base17)
+			Letter Number:
+				 9 20-18-1-14-19-6-5-18-18-5-4 20-8-5 2-9-20-3-15-9-14 15-21-20 15-6 20-8-5 5-24-3-8-1-14-7-5: I TRANSFERRED THE BITCOIN OUT OF THE EXCHANGE
+			Substitution Cipher:
+				hzoezwliHjfrttovh: salvadorSquiggles (affine)
+			Pigpen:
+				THE DRIVE IS UNDER THE TV STAND
+			Railfence:
+				w     eytaihtkyddyuuet nrp h rhv?aeiosoctece: what key did you use to encrypt the archive? (3, 0)
+				s ersnusdoh y m kyee: send me your ssh key (3, 7)
+			Steg:
+				Steg 1: SKY-INSI-7918
+				Steg 2: SKY-ERNT-4183(blind hide)
+
 
 NCL:
 cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail 10
