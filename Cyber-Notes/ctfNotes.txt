@@ -136,7 +136,7 @@ Ciphers:
 		c = 539 685 1763 536 1725 1006 685 953 536 1319 103 1319 843
 
 
-NCL Individual Game:
+NCL Individual Game fall 2019:
 	OSINT:
 		Codenames (https://www.2600.com/secret/more/codes.html):
 			Mechanic: Jared Kushner
@@ -209,44 +209,299 @@ NCL Individual Game:
 			$1$vgah$VnxHyh1o3FwMZAvKA5AQo0: 
 			$1$lkwc$iOXF5ekiNNyj1KByGFO8s/:
 
-	NCL Spring Game:
+	NCL Spring Preseason Game 2020:
+		
 		OSINT
 			Compromise Report:
+
 				CCLEANER Malware: Floxif
 				Time: 601
 				DLL: CBkrdr.dll
 				Registry location: HKLM\SOFTWARE\Piriform\Agomo:NID
 				HTTP POST: 216.126.225.148
+
 			Google Dorks:
+
 				Specific domain: site: 
 				links to another site: links:
 				Specific value in page title: intitle:
 				Search <domain> for XML files: filetype:xml site:
 				Directory listing: in title: "index of"
+
 			Capture the Flag (ctf.jpg):
+
 				City: Macedon
 				Date Taken: Oct. 14, 2019
 				Who owns the Field: Long Acre Farms
 				Flag Value: SKY-MAZE-1014
+
 			Tracking:
 				City:
+
 		Crypto:
+
 			Number Bases:
+
 				067 070 143 157 154 157 162 145 166 145 162 171 065 064: 78colorevery54 (base8)
 				33 38 20 33 30 20 37 32 20 36 35 20 36 31 20 36 63 20 36 63 20 37 39 20 36 35 20 36 31 20 37 32 20 37 34 20 36 38 20 33 31 20 33 33: 80reallyearth13 (base16 --> hex)
 				35 36 5e 62 5c 68 5e 5g 5e 69 6f 68 6e 2e 31: 89chancecount04 (base17)
+
 			Letter Number:
+
 				 9 20-18-1-14-19-6-5-18-18-5-4 20-8-5 2-9-20-3-15-9-14 15-21-20 15-6 20-8-5 5-24-3-8-1-14-7-5: I TRANSFERRED THE BITCOIN OUT OF THE EXCHANGE
+
 			Substitution Cipher:
+
 				hzoezwliHjfrttovh: salvadorSquiggles (affine)
+
 			Pigpen:
+
 				THE DRIVE IS UNDER THE TV STAND
+
 			Railfence:
+
 				w     eytaihtkyddyuuet nrp h rhv?aeiosoctece: what key did you use to encrypt the archive? (3, 0)
 				s ersnusdoh y m kyee: send me your ssh key (3, 7)
+
 			Steg:
+
 				Steg 1: SKY-INSI-7918
 				Steg 2: SKY-ERNT-4183(blind hide)
+
+	NCL Spring Regular Season Game 2020:
+
+		OSINT:
+
+			Rules (Duh)
+
+				No sharing answers
+
+			WHOIS (Domain: cityinthe.cloud):
+
+				Registrar: whois.namecheap.com
+				Date Registered: 2016-02-16
+				Registry Domain ID: D15CD1AC4DEB54207A5048A69B9FC0558-ARI
+				TLD: cloud
+				Managing Organization: Aruba PEC SpA
+			
+			Tax Stuff:
+
+				Employer Identification:
+					Apple EIN: 94-2404110
+					USPS: 41-0760000
+					Spectrum: 841496755
+				
+				TIN:
+
+					578-10-**** City: DC (SSN first 3 digits)
+				
+				Facebook's UK Company Number: 06331310
+			
+			Iowa Caucus app:
+
+				Developer: Shadow
+				website: https://shadowinc.io/
+				Amount for the App: $63,183.91
+				Platform Distributed on: TestFairy
+				501(c) of ACRONYM: 501(c)(4)
+				ACRONYM's PAC: PACRONYM
+				What is ACRONYM's federal employer identification number: 82-1630469
+			
+			Geolocation:
+				Address: 397 Redmar Blvd, Fort Knox, KY 40121
+
+		Cryptography:
+
+			Number Bases:
+				
+				00110010 01110010 01101111 01100010 01100101 01110010 01110100 01001111 00110110: 2robertO6 (binary)
+				6d796c65673538: myleg58 (hex)
+				OW5ha2lzMTYw: 9nakis160(base64)
+			
+			Decimal-Letter: 
+
+				73 32 105 110 115 116 97 108 108 101 100 32 107 105 115 109 101 116 32 111 110 32 115 105 120 32 104 111 115 116 115: I installed kismet on six hosts (Decimal)
+
+			Cellphone keypad:
+
+				8-44-33 8-2-777-4-33-8 44-2-7777 2 4-33-666-333-33-66-222-33 2-555-2-777-6: THE TARGET HAS A GEOFENCE ALARM
+
+			Morse Code (Decoding 4.wav):
+
+				TIME TO FLIP THE SWITCH	
+
+			RC4 with 4 char pass:
+
+				1834e1b2170c2ac5212677e3ae48ed42c32810400afca21defab111bc7: 
+
+			RSA:
+				
+				p: 5
+				q: 97
+				e = 53
+
+				c= 153 75 309 310 74 203 208 401 310 371 363 451 125
+
+			Steg 1:
+
+				MIME type: image/jpeg
+				FLAG: SKY-WUVD-3860
+
+			Steg 2: 
+
+
+
+			Scanning:
+
+				Gitlab (Need RSA keypair)
+
+					Display Name: Cyber Cyber
+					Commit hash (first 8): f9714edd5
+					FLAG1: SKY-HSNO-2303
+					FLAG2: SKY-OZNW-3730
+					FLAG3: SKY-CCXL-4067
+					FLAG4: SKY-IRRK-9672
+					FLAG5: SKY-DKIT-9801
+
+				API Leak:
+
+					Contact page: /contact.html
+					admin-panel: /admin-panel.html
+					API key: 
+
+				Knock:
+					knockd -i lo 
+
+			Password Cracking:
+
+				Calculating Hashes:
+
+					md5 of haseks350461: f2baebf29a5771eafa6c34b34209570e
+					sha1 of 43tzuculetz: d9cfded619fee4381a969ec1ade1fc4cbeb52749
+					sha256 of 24turam7: ab6e1b9cf5f94b19cbe736272cb8f119e5eedc5f02132ea3d537b2fbd8ebef83
+
+				RockYou:
+
+					90f849dddba22636721bf9e2339c94e9:muffiedog
+					64b143a16aca9f89aedbd9ed8061958e:danicat
+					b3c1699660f08b509b8d86d736d30094:koifish3
+				
+				NTLM:
+
+					3107107B5418D6C1FF17365FAF1FFE89:E1CC5A4076AB4AEFAA8AA5A615E89FAE:
+					D90470E7B220B55DBBB4BF79173F1542:B63D41B03FB77FFC49E4E3A245649665:	
+					D802AC2DAA8824EB99FA097ADD9E35C4:DFCD7A84EE97CD8EF9628D34C4924AD4:
+				
+				Custom flags (SKY-HQEI-%%%%):
+
+					d7203ac9a97c329c358e860c673ddf5b: SKY-HQEI-3564
+					6805f4cfe1a747df0dfe2c6a6472f93a: SKY-HQEI-3139
+					c639923795b2f877a67aa449ebdeda12: SKY-HQEI-8354
+
+				MD5crypt:
+
+					$1$XqZi$MZjGRnGfQnl77WxsnYJNp.
+					$1$XqZi$A2tOxH.IzYBoOPDdMmnCE1
+					$1$XqZi$jTK5rYbc00TtnbNPWvJE30
+					$1$XqZi$CtHj3hV2jrMHWROjf0L9v1
+					$1$XqZi$V8m5pK9pq9bof.W.T1m691
+			
+			Log Analysis:
+
+				Event Logs:
+
+					Reboot: 1/19/2020 9:23
+					Errors: 5 
+					Sleep from Microsoft-Windows-Kernel-Power: 69
+					Candy Crush update: 1/30/2020 11:50 AM	
+					Security updates successfully installed: 50
+					Most patches in one update: 17
+
+				AWS:
+
+					Flow records:
+					Date captured:
+					Total bytes:
+					Total packets:
+					IP with the most flow records:
+					IP with the 5th most bytes:
+					Average flow duration:
+
+					
+
+
+
+			Web App Exploitation:
+				
+				Election Hacking:
+
+					Precincts: 5
+					Candidates: 4
+					Max Votes: 10
+
+			Enumeration and Exploitation:
+
+				Bytes:
+					
+					Programming language: python
+
+			Network Traffic Analysis:
+
+				ARP:
+
+					Raspberry Pi MAC: B8:27:EB:48:46:37
+					IP of Sunitechi device: 192.168.2.7
+					MAC of 192.168.2.20: 80:2A:A8:10:12:E0
+					Number of devices: 4
+					IP Class: C
+					ARP Layer: Link
+				
+				TFTP:
+
+					File Name: SK72f64050-7ad5-4b47-9bfa-5e9ad9cd4aa9.xml.sgn
+					IP of Host: 6.6.6.15
+					IP of the downloader: 6.6.6.87
+					Number of Blocks: 10
+					Maximum block size (bytes): 512
+					File size in bytes: 4767
+					md5sum: cf2b6fd8cec2a5b311463afca9d3b4ac
+				
+				DHCP:
+
+					IP of the DHCP Server: 10.244.0.10
+					MAC of the DHCP relay agent: 00:23:05:8C:0D:47
+					Manufacturer of the relay agent: cisco
+					MAC of the DHCP client: 00:0C:29:21:CD:92
+					IP offer: 10.244.9.3
+					DHCP Lease: 24
+					First DNS Server IP: 10.244.0.10
+				
+			Wireless Access Exploitation (aircrck-ng):
+
+				Cracking 1:
+
+					Network Channel: 5
+					ESSID: The Promised Lan
+					Deauthed MAC: AC:CA:52:A8:BD:24
+					Attacker MAC: D8:3F:7A:7D:E5
+					Wireless Password: 77:46:6A:56:2F 
+				
+				Cracking 2: 
+
+					Network Channel: 3
+					ESSID: Ping's Landinng
+					Deauthed MAC: B6:F0:D4:B3:C7:02
+					Wireless Password: Lannister1
+
+				Cracking 3:
+
+					Channel: 7
+					ESSID: Unknown Azul
+					Deauthed MAC: 20:98:8B:70:9E:72
+					Password: liberdade3010
+			
+		Survey:
+
 
 
 NCL:
