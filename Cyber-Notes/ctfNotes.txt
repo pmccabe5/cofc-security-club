@@ -340,7 +340,9 @@ NCL Individual Game fall 2019:
 				q: 97
 				e = 53
 
-				c= 153 75 309 310 74 203 208 401 310 371 363 451 125
+				c = 153 75 309 310 74 203 208 401 310 371 363 451 125
+
+				FLAG: SKY-TIDL-8537
 
 			Steg 1:
 
@@ -349,11 +351,11 @@ NCL Individual Game fall 2019:
 
 			Steg 2: 
 
-
+				Encoding algorithm: Brotli
 
 			Scanning:
 
-				Gitlab (Need RSA keypair)
+				Gitlab (Need RSA ssh keypair)
 
 					Display Name: Cyber Cyber
 					Commit hash (first 8): f9714edd5
