@@ -429,10 +429,6 @@ NCL Individual Game fall 2019:
 					IP with the 5th most bytes:
 					Average flow duration:
 
-					
-
-
-
 			Web App Exploitation:
 				
 				Election Hacking:
@@ -446,6 +442,8 @@ NCL Individual Game fall 2019:
 				Bytes:
 					
 					Programming language: python
+					Flag hex: 53 75 59 2D 0110 45 88 83 2D 31 32 35 36
+							  S  K  Y  -       E       -  1  2  5  6
 
 			Network Traffic Analysis:
 
