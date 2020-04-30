@@ -501,8 +501,108 @@ NCL Individual Game fall 2019:
 					Password: liberdade3010
 			
 		Survey:
+		
+	NCL Spring 2020 Postseason:
 
+		OSINT:
 
+			Github (cityinthecloud):
+
+				URL:
+				Repo interested in:
+				Hidden Flag (Profile):
+				Time Created:
+				Email:
+				SSH Public Key:
+
+			Targets:
+
+				Target 1: 1667751
+				Target 2: EA24
+				Target 3: H. 27.9.
+
+			Standard Numbers (Hacking Exposed Wireless, 3rd Edition from McGraw-Hill (Paperback).):
+
+				What is the ISBN-10 number for the book?: 
+				What is the ISBN-13 number for the book (no dashes)?:
+				What is the ASIN number for the book?:
+
+			Code.png:
+
+				Name scheme:
+
+		Crypto:
+
+			Decoding 1: 
+
+				164 157 155 142 157 171 061 063 062 071:
+				373337343631373233353335333633333334:
+
+			Decodeing 2:
+
+				India Tango-Oscar-Oscar-Kilo Delta-Oscar-Whiskey-November Tango-Hotel-Echo Whiskey-Alpha-Foxtrot
+			
+			Decoding 3:
+
+				Jmdu grikdkt sv R qxxs uv nvlargx drknkdnb:
+
+			Decoding 4:
+
+				BABAAABBBBAAABBAAAAABAABBAABAA ABBAAAABAABAABBAAAAABAABAABBBBABABBABBBAABAAABAABB AABABABBBABAAAB BAABBAABBBAABAA ABBABAABAABABBA AABAABABBBABBBBABABBABBBAABAAABAABB ABBBBAAAAABBAAAABABBABBBAAAAAAAAABB:
+
+			Decoding 5:
+
+				Key = DEADBEEFC0FFEEE
+				IV = 83 44 97 d5 31 66 ?? ??
+				c = cc9ab9c521af8b2343665bb6bd2864a770406c70761ccf01512158c33e90afa5
+
+		Password Cracking:
+
+			Cracking 1 (md5 rockyou):
+
+				6d19b0d9546ced4961106967acd06c77:m123m456
+				7800a175686856f57e79486742f19e6f:money1163
+				cd0773e6a582bef9fe581752966a15e3:foofandbinnie
+
+			Cracking 2 (ntlm):
+
+				2D180EFEE0282EAD1D71060D896B7A46:B3FDD676CE0E8932D28780502664BC34:GAMICA2:2:gamica22
+				2279A34D471BBFB96C0B4903D27C0B74:D8CD623FB787427E87F541CB420A4BCE:MOLECER:E47:molecere47
+				5EF6FF981602A2FF0C19FEAE65E9156C:C1038A5567C8E4553994F4430AF4A6B9:OVUJONO:BOS69:ovujonobos69
+
+			Cracking 3 (SKY-TYFY-%%%%):
+
+				d22b6bd21e04f329a9591c3e8ff43a04:SKY-TYFY-9193
+				0338cebb0b6fc579277f3ce201d4f6d5:SKY-TYFY-9971
+				d8775cf013cc92e6e5903432b50574d8:SKY-TYFY-3962
+
+			Cracking 4 (md5crypt):
+
+				$1$etnj$sEsjmjBrxNckMqjDVygjV.
+
+				
+		Wireless Access Exploitation:
+
+			Easy: 
+				Wireless channel: 2
+				ESSID: The LAN Before Time
+				MAC of deauth: f6:7e:95:cc:0c:bd
+				Attacker MAC: 84:e1:ad:d0:fd:21
+				Hex password: 
+			
+			Medium:
+
+				Channel: 4
+				ESSID: FBI Van #8
+				MAC of the Victim:  82:35:ce:82:a7:15
+				Wireless Password:
+
+			Hard:
+
+				Channel: 10
+				ESSID: darkc0de
+				Victim MAC: 58:5a:0d:94:10:5d
+				Password:
 
 NCL:
 cat /path/to/access.log | awk '{print $1}' | sort | uniq -c | sort -n | tail 10
